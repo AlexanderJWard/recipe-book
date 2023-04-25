@@ -5,11 +5,71 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../assets/logo.png";
 import { NavLink } from "react-router-dom";
-import { useCurrentUser } from "../contexts/CurrentUserContext";
+import { useCurrentUser, useSetCurrentUser } from "../contexts/CurrentUserContext";
+import Avatar from "./Avatar";
+import axios from "axios";
 
 const NavBar = () => {
   const currentUser = useCurrentUser();
-  const loggedInIcons = <>{currentUser?.username}</>
+  const setCurrentUser = useSetCurrentUser();
+
+  const handleSignOut = async () => {
+    try {
+      await axios.post("dj-rest-auth/logout/");
+      setCurrentUser(null);
+    } catch (err) {
+      // console.log(err);
+    }
+  };
+
+  const addRecipeIcon = (
+    <NavLink
+      to="/recipe/create"
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+    >
+      <i class="fa-solid fa-utensils"></i> New Recipe
+    </NavLink>
+  );
+  const loggedInIcons = (
+    <>
+      <NavLink
+        to="/explore"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i class="fa-solid fa-book-open"></i> Explore
+      </NavLink>
+      <NavLink
+        to="/liked"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i class="fa-solid fa-cookie"></i> Liked
+      </NavLink>
+      <NavLink
+        to="/support"
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <i class="fa-solid fa-circle-question"></i> Support
+      </NavLink>
+      <NavLink
+        to="/"
+        className={styles.NavLink}
+        onClick={handleSignOut}
+      >
+        <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+      </NavLink>
+      <NavLink
+        to={`/profiles/${currentUser?.profile_id}`}
+        className={styles.NavLink}
+        activeClassName={styles.Active}
+      >
+        <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
+      </NavLink>
+    </>
+  );
   const loggedOutIcons = (
     <>
       <NavLink
@@ -38,6 +98,7 @@ const NavBar = () => {
               <img src={logo} alt="logo" height="45" /> Recipe Book
             </Navbar.Brand>
           </NavLink>
+          {currentUser && addRecipeIcon}
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto text-left">
