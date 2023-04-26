@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Image from "react-bootstrap/Image";
 import Container from "react-bootstrap/Container";
-import SignUp from "../../assets/SignUp.jpg";
+import SignUpIn from "../../assets/signUpIn.jpg";
 import { Link, useHistory } from "react-router-dom";
 
 import styles from "../../styles/SignInUpForm.module.css";
@@ -98,7 +98,7 @@ function SignInForm() {
       </Col>
       <Col md={6} className={`my-auto d-none d-md-block p-2`}>
         {/* https://www.pexels.com/photo/a-person-baking-a-cake-8477970/ */}
-        <Image src={SignUp} className={`${styles.Image}`} />
+        <Image src={SignUpIn} className={`${styles.Image}`} />
       </Col>
     </Row>
   );

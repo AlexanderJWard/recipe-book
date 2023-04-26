@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import SignUp from "../../assets/SignUp.jpg";
+import SignUpIn from "../../assets/signUpIn.jpg";
 import styles from "../../styles/SignInUpForm.module.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -105,7 +105,7 @@ const SignUpForm = () => {
         </Container>
       </Col>
       <Col md={6} className="my-auto d-none d-md-block p-2">
-        <Image src={SignUp} className={`${styles.Image}`} />
+        <Image src={SignUpIn} className={`${styles.Image}`} />
       </Col>
     </Row>
   );

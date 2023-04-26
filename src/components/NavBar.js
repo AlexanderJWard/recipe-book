@@ -29,7 +29,7 @@ const NavBar = () => {
 
   const addRecipeIcon = (
     <NavLink
-      to="/recipe/create"
+      to="/posts/create"
       className={styles.NavLink}
       activeClassName={styles.Active}
     >
