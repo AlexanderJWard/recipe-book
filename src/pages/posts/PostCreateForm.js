@@ -12,15 +12,15 @@ import Loading from "../../components/Loading";
 
 import Upload from "../../assets/upload.png";
 
-import styles from "../../styles/RecipeCreate.module.css";
+import styles from "../../styles/PostCreateEdit.module.css";
 
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
-function RecipeCreateForm() {
+function PostCreateForm() {
   const [errors, setErrors] = useState({});
 
-  const [recipeData, setRecipeData] = useState({
+  const [postData, setPostData] = useState({
     title: "",
     prep_time_minutes: 0,
     cooking_time_minutes: 0,
@@ -37,14 +37,14 @@ function RecipeCreateForm() {
     method,
     difficulty,
     image,
-  } = recipeData;
+  } = postData;
 
   const imageInput = useRef(null);
   const history = useHistory();
 
   const handleChange = (event) => {
-    setRecipeData({
-      ...recipeData,
+    setPostData({
+      ...postData,
       [event.target.name]: event.target.value,
     });
   };
@@ -52,8 +52,8 @@ function RecipeCreateForm() {
   const handleChangeImage = (event) => {
     if (event.target.files.length) {
       URL.revokeObjectURL(image);
-      setRecipeData({
-        ...recipeData,
+      setPostData({
+        ...postData,
         image: URL.createObjectURL(event.target.files[0]),
       });
     }
@@ -236,4 +236,4 @@ function RecipeCreateForm() {
   );
 }
 
-export default RecipeCreateForm;
+export default PostCreateForm;

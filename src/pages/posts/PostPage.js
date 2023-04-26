@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
-import Comment from "../comments/Comment";
+import Comment from "../comments/Comment.js";
 
 import CommentCreateForm from "../comments/CommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
