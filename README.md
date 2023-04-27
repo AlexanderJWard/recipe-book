@@ -1,4 +1,4 @@
-# Recipe Book
+# Recipe Book - WORK IN PROGRESS, NOT FINISHED
 
 ## Table of Contents
 + [UX](#ux "UX")
