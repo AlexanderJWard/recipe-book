@@ -53,7 +53,8 @@ const SupportPage = ({ message, filter = "" }) => {
         </Form>
         {hasLoaded ? (
           <>
-            {tickets.results.length ? (
+          <p>WORK IN PROGRESS</p>
+            {/* {tickets.results.length ? (
               <InfiniteScroll
                 children={tickets.results.map((ticket) => (
                   <Support
@@ -71,7 +72,7 @@ const SupportPage = ({ message, filter = "" }) => {
               <Container>
                 <Loading src={NoResults} message={message} />
               </Container>
-            )}
+            )} */}
           </>
         ) : (
           <Container>
