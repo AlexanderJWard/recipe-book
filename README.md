@@ -119,3 +119,5 @@ Sign in and Sign up image: https://www.pexels.com/photo/a-person-baking-a-cake-8
 Cloud upload image: https://www.vecteezy.com/vector-art/2292434-upload-and-download-cloud-vector-isolated-icon
 
 Book logo image: https://www.vecteezy.com/vector-art/6792248-book-line-icons-vector-design
+
+Cupcakes image: https://www.pexels.com/photo/assorted-cupcakes-14105/
