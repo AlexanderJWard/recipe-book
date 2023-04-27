@@ -54,16 +54,6 @@
 
 ### Wireframes:
 
-##### Home Page - Desktop: 
-
-
-##### Home Page - Mobile: 
-
-
-##### Form Page:
-
-
-##### Site Navigation:
 
 
 ### Database Schema:
