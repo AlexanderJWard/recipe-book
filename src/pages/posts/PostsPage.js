@@ -83,7 +83,7 @@ function PostsPage({ message, filter = "" }) {
             )}
           </>
         ) : (
-          <Container className={appStyles.Content}>
+          <Container>
             <Loading spinner />
           </Container>
         )}

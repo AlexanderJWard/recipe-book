@@ -76,11 +76,11 @@ function PostEditForm() {
     const formData = new FormData();
 
     formData.append("title", title);
-    formData.append("method", content);
-    formData.append("ingredients", content);
-    formData.append("prep_time_minutes", content);
-    formData.append("cooking_time_minutes", content);
-    formData.append("difficulty", content);
+    formData.append("method", method);
+    formData.append("ingredients", ingredients);
+    formData.append("prep_time_minutes", prep_time_minutes);
+    formData.append("cooking_time_minutes", cooking_time_minutes);
+    formData.append("difficulty", difficulty);
 
     if (imageInput?.current?.files[0]) {
       formData.append("image", imageInput.current.files[0]);

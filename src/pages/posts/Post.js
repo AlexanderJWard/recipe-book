@@ -19,8 +19,6 @@ const Post = (props) => {
     comments_count,
     likes_count,
     like_id,
-    rating_id,
-    rating_count,
     title,
     method,
     ingredients,
