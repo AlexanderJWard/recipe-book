@@ -52,13 +52,13 @@ const NavBar = () => {
       >
         <i class="fa-solid fa-cookie"></i> Liked
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to="/support"
         className={styles.NavLink}
         activeClassName={styles.Active}
       >
         <i class="fa-solid fa-circle-question"></i> Support
-      </NavLink>
+      </NavLink> */}
       <NavLink to="/" className={styles.NavLink} onClick={handleSignOut}>
         <i class="fa-solid fa-right-from-bracket"></i> Sign Out
       </NavLink>

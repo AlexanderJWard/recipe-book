@@ -19,6 +19,9 @@ import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 import NotFound from "./components/NotFound";
 import SupportPage from "./pages/support/SupportPage";
+import TodoPage from "./pages/todo/TodoPage";
+import TodoEditForm from "./pages/todo/TodoEditForm";
+import TodoCreateForm from "./pages/todo/TodoCreateForm";
 
 function App() {
   const currentUser = useCurrentUser();
@@ -70,6 +73,9 @@ function App() {
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />} />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
+          <Route exact path="/todo/create" render={() => <TodoCreateForm />} />
+          <Route exact path="/todo/:id" render={() => <TodoPage />} />
+          <Route exact path="/todo/:id/edit" render={() => <TodoEditForm />} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
           <Route
             exact
