@@ -64,15 +64,14 @@ function TodoCreateForm() {
       ))}
 
       <Form.Group>
-        <Form.Label>Task Complete</Form.Label>
-        <Form.Check
-          type="checkbox"
+        <Form.Label>Task Complete? (TRUE / FALSE)</Form.Label>
+        <Form.Control
+          type="text"
           name="task_complete"
-          value={task_complete}
           onChange={handleChange}
         />
       </Form.Group>
-      {errors?.task_complete?.map((message, idx) => (
+      {errors?.title?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>

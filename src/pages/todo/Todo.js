@@ -6,16 +6,10 @@ import Media from "react-bootstrap/Media";
 import { useHistory } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const Todo = (props) => {
-  const {
-    id,
-    owner,
-    title,
-    task_complete,
-    updated_at,
-    todoPage,
-  } = props;
+  const { id, owner, title, task_complete, updated_at, todoPage } = props;
 
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
@@ -30,7 +24,7 @@ const Todo = (props) => {
       await axiosRes.delete(`/todo/${id}/`);
       history.goBack();
     } catch (err) {
-      // console.log(err);
+      console.log(err);
     }
   };
 
@@ -50,9 +44,12 @@ const Todo = (props) => {
         </Media>
       </Card.Body>
       <Card.Body>
-        <p>test</p>
-        {title && <Card.Title className="text-center">{title}</Card.Title>}
-        {task_complete && <Card.Title className="">{task_complete}</Card.Title>}
+        {title && is_owner && <Card.Title><Link to={`/todo/${id}`}>{title}</Link></Card.Title>}
+        {task_complete && (
+          <Card.Text className="text-center">
+            Task has been completed!
+          </Card.Text>
+        )}
       </Card.Body>
     </Card>
   );

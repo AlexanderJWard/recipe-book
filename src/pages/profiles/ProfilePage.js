@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 import Loading from "../../components/Loading";
 
@@ -16,8 +17,9 @@ import {
   useProfileData,
   useSetProfileData,
 } from "../../contexts/ProfileDataContext";
-import { Button, Image } from "react-bootstrap";
+import { Button, Card, Image } from "react-bootstrap";
 import Post from "../posts/Post";
+import Todo from "../todo/Todo";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/utils";
 import NoResults from "../../assets/no-results.png";
@@ -25,6 +27,7 @@ import NoResults from "../../assets/no-results.png";
 function ProfilePage() {
   const [hasLoaded, setHasLoaded] = useState(false);
   const [profilePosts, setProfilePosts] = useState({ results: [] });
+  const [profileTodo, setProfileTodo] = useState({ results: [] });
   const currentUser = useCurrentUser();
   const { id } = useParams();
   const { setProfileData } = useSetProfileData();
@@ -35,15 +38,21 @@ function ProfilePage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [{ data: pageProfile }, { data: profilePosts }] = await Promise.all([
+        const [
+          { data: pageProfile },
+          { data: profilePosts },
+          { data: profileTodo },
+        ] = await Promise.all([
           axiosReq.get(`/profiles/${id}/`),
           axiosReq.get(`/posts/?owner__profile=${id}`),
+          axiosReq.get(`/todo/?owner__profile=${id}`),
         ]);
         setProfileData((prevState) => ({
           ...prevState,
           pageProfile: { results: [pageProfile] },
         }));
         setProfilePosts(profilePosts);
+        setProfileTodo(profileTodo);
         setHasLoaded(true);
       } catch (err) {
         console.log(err);
@@ -93,6 +102,31 @@ function ProfilePage() {
     </>
   );
 
+  const mainProfileTodo = (
+    <>
+      <hr />
+      <p className="text-center">{profile?.owner}'s tasks</p>
+      <hr />
+      {is_owner && <Card.Title><Link to={`/todo/create`}>Create a new task</Link></Card.Title>}
+      {profileTodo.results.length ? (
+        <InfiniteScroll
+          children={profileTodo.results.map((todo) => (
+            <Todo key={todo.id} {...todo} setTodo={setProfileTodo} />
+          ))}
+          dataLength={profileTodo.results.length}
+          loader={<Loading spinner />}
+          hasMore={!!profileTodo.next}
+          next={() => fetchMoreData(profileTodo, setProfileTodo)}
+        />
+      ) : (
+        <Loading
+          src={NoResults}
+          message={`No results found, ${profile?.owner} hasn't added any tasks.`}
+        />
+      )}
+    </>
+  );
+
   const mainProfilePosts = (
     <>
       <hr />
@@ -125,6 +159,7 @@ function ProfilePage() {
           {hasLoaded ? (
             <>
               {mainProfile}
+              {mainProfileTodo}
               {mainProfilePosts}
             </>
           ) : (
