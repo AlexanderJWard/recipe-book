@@ -103,10 +103,12 @@ const Post = (props) => {
       </Link>
       <Card.Body>
         {title && <Card.Title className="text-center">{title}</Card.Title>}
+        Ingredients:
         {ingredients && <Card.Text>{ingredients}</Card.Text>}
+        Method:
         {method && <Card.Text>{method}</Card.Text>}
-        {prep_time_minutes && <Card.Text>{prep_time_minutes}</Card.Text>}
-        {cooking_time_minutes && <Card.Text>{cooking_time_minutes}</Card.Text>}
+        {prep_time_minutes && <Card.Text>Prep time (mins): {prep_time_minutes}</Card.Text>}
+        {cooking_time_minutes && <Card.Text>Cooking time (mins): {cooking_time_minutes}</Card.Text>}
         <div className={styles.PostBar}>
           {is_owner ? (
             <OverlayTrigger
