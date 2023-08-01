@@ -1,4 +1,4 @@
-# Recipe Book - WORK IN PROGRESS, NOT FINISHED
+# Recipe Book
 
 Recipe Book is a recipe-sharing site where foodies can share their favourite meals with other members of the community. With the ability to comment and like posts users are encouraged to engage with each other and share the love of food.
 
