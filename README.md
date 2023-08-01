@@ -1,5 +1,13 @@
 # Recipe Book - WORK IN PROGRESS, NOT FINISHED
 
+Recipe Book is a recipe-sharing site where foodies can share their favourite meals with other members of the community. With the ability to comment and like posts users are encouraged to engage with each other and share the love of food.
+
+Deployed HEROKU frontend project: [https://ajw-recipe-book.herokuapp.com/](https://ajw-recipe-book.herokuapp.com/)
+Deployed HEROKU backend API: [https://ajw-recipe-book-api.herokuapp.com/](https://ajw-recipe-book-api.herokuapp.com/)
+GitHub repository backend API: [https://github.com/AlexanderJWard/recipe-book-api](https://github.com/AlexanderJWard/recipe-book-api)
+
+![image](https://github.com/AlexanderJWard/recipe-book/assets/102811792/90560ca7-a6e0-4190-ae98-3b9ad261f0fa)
+
 ## Table of Contents
 + [UX](#ux "UX")
   + [Site Purpose](#site-purpose "Site Purpose")
@@ -24,28 +32,36 @@
   + [Content](#content "Content")
   + [Media](#media "Media")
   
-  ## UX
+## UX
 
 ### Site Purpose:
 
+The purpose is to bring people together to share new foods and encourage people to discover new recipes and make new friends by exploring new posts.
 
 ### Site Goal:
 
+The goal is to create a friendly environment where anyone with an interest in cooking can discover and connect with interesting people and delicious foods.
 
 ### Audience:
 
+Anyone who has an interest in food or cooking of any sort is looking for new things to try or people to meet. People of any age or gender who have a shared interest in the food world and skilled people giving their thoughts and recipes to the community.
 
 ### Communication:
 
+The site is laid out like a social media website allowing users to scroll through new posts, like and comment on things they enjoy or follow people with similar tastes or experiences.
 
 ### Current User Goals:
 
+Users will want to save posts to try later or just to follow influential people who are making the food they enjoy, they will want to keep checking in to see their favourite people post new and exciting things to try in the kitchen.
 
 ### New User Goals:
 
+To interact with existing users to learn new things and explore what the site has to offer, making new friends or helping others with techniques and tips and tricks.
 
 ### Future Goals:
 
+- I would like to add the ability for users to rate recipes which would tally into a global rating out of 5 stars from everyone who voted.
+- I would like to add a support ticket system to allow users to report issues with the site or people posting inappropriate content.
 
 ## User Stories
 Here are the links to my [kanban board](https://github.com/users/AlexanderJWard/projects/4) and the user stories hosted in [Github issues](https://github.com/AlexanderJWard/recipe-book/issues)
@@ -54,25 +70,49 @@ Here are the links to my [kanban board](https://github.com/users/AlexanderJWard/
 
 ### Wireframes:
 
-
+![image](https://github.com/AlexanderJWard/recipe-book/assets/102811792/43e56fff-b3c5-4133-a292-930e2114f753)
 
 ### Database Schema:
 
 
 ### Colour Scheme:
 
-
+I used brown and beige for the theme of cooking as I mainly thought of baking and tried to replicate the colors associated with them that match.
 
 ### Typography:
 
+The used font is free and called Hero
 
 ## Features
 
 ### Existing Features:
 
+Navigation:
+![image](https://github.com/AlexanderJWard/recipe-book/assets/102811792/f4d45c20-61e8-4b4c-8082-083e4fda9a7f)
+
+Explore page:
+![image](https://github.com/AlexanderJWard/recipe-book/assets/102811792/fa4c8a90-2f68-439a-9157-2e9b9886b6fb)
+
+Profile page:
+![image](https://github.com/AlexanderJWard/recipe-book/assets/102811792/f431db7a-3961-4f5c-911c-d9cdc898e12a)
+
+New recipe page:
+![image](https://github.com/AlexanderJWard/recipe-book/assets/102811792/5986db38-45dc-4422-ab67-959b915fb8ec)
+
+Sign in page:
+![image](https://github.com/AlexanderJWard/recipe-book/assets/102811792/9912b124-8dcb-4a1d-a96c-82283eb3f1ab)
+
+Sign up page:
+![image](https://github.com/AlexanderJWard/recipe-book/assets/102811792/4f754718-45ed-4683-b397-af3d59d6687b)
+
 
 ### Features Left to Implement:
-
+- Add more fields to the tasks on profiles
+- Support tickets
+- Rating system
+- Group messages
+- Private profiles for specified users
+- Email notification for when followed users post new content
 
 ## Testing
 
