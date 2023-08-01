@@ -107,6 +107,9 @@ Sign in page:
 Sign up page:
 ![image](https://github.com/AlexanderJWard/recipe-book/assets/102811792/4f754718-45ed-4683-b397-af3d59d6687b)
 
+404 page:
+![image](https://github.com/AlexanderJWard/recipe-book/assets/102811792/7cdb3773-9e0f-4bea-8b60-8181c3f0f6ea)
+
 
 ### Features Left to Implement:
 - Add more fields to the tasks on profiles
