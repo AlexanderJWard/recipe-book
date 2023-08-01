@@ -78,6 +78,8 @@ Here are the links to my [kanban board](https://github.com/users/AlexanderJWard/
 ### Colour Scheme:
 
 I used brown and beige for the theme of cooking as I mainly thought of baking and tried to replicate the colors associated with them that match.
+#FFB677
+#917059
 
 ### Typography:
 
@@ -118,34 +120,79 @@ Sign up page:
 
 ### Manual Testing:
 
+- CRUD tests for comments, likes, posts, follow and tasks
+- Nav links tested for related pages
+- Non logged in users attempting to create new posts
+- Non logged in users trying to sign in and sign up
+- All users logging out
 
 ### Validator Testing
 
+EsLint has been performed, the issues can be found [here](https://github.com/AlexanderJWard/recipe-book/issues/20)
+
+Lighthouse Accessibility:
+![image](https://github.com/AlexanderJWard/recipe-book/assets/102811792/d9a4e6e9-020f-406f-9084-d263ad30a8ff)
 
 ### Unfixed Bugs
 
+I've not got the nav bar working as intended on mobile as some of the text gets slightly obscured and I need to make the text smaller to fit nicer on tablets or mobile.
 
 ## Technologies Used
 ### Main Languages Used
 
+- JS
+- HTML5
+- Python
+- Postgres SQL
+- CSS
 
 ### Frameworks, Libraries & Programs Used
 
+Font Awesome
+GitHub
+Heroku
+Django Rest
+React Bootstrap
+GitPod
 
 ## Components
 
+Loading spinner
+Navigation bar
+Burger menu collapse
+Infinite scroll
+Axios for API
 
 ## Deployment
 
+1. Launch coding environment, GitPod and install react:
+   - npx create-react-app . --use-npm
+   - npm start
+
+2. Install packages
+   - npm install react-bootstrap@4.6.0
+   - npm install react-router-dom@5.3.0
+   - npm install axios
+   - npm install react-install-scroll-component
+   - npm install jwt-decode
+
+3. Commit changes with Git
+4. Create a Heroku new project and link the GitHub repository in the Deploy section
 
 ### Connecting to the API:
 
+   - Navigate to Heroku app API and in settings add config vars
+       CLIENT_ORIGIN = https://react-app-name.herokuapp.com
+       CLIENT_ORIGIN_DEV = https://gitpod(UNIQUE LINK).io
+   - Remove trailing slash from above config vars
+   - Create supporting axiosDefaults.js
+   - Deploying to Heroku
 
 ### Deploy to Heroku:
 
-
-### Deploy to Render & ElephantSQL:
-
+   - In scripts part of package.json add "heroku-prebuild": "npm -g serve"
+   - Create Procfile with web: gunicorn p5_drf_api.wsgi
+   - Git commit and push and deploy on Heroku
 
 ## Credits
 
