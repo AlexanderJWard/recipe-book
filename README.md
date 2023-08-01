@@ -48,7 +48,7 @@
 
 
 ## User Stories
-
+Here are the links to my [kanban board](https://github.com/users/AlexanderJWard/projects/3)
 
 ## Design
 
@@ -121,3 +121,4 @@ Cloud upload image: https://www.vecteezy.com/vector-art/2292434-upload-and-downl
 Book logo image: https://www.vecteezy.com/vector-art/6792248-book-line-icons-vector-design
 
 Cupcakes image: https://www.pexels.com/photo/assorted-cupcakes-14105/
+Banana Bread image: https://www.pexels.com/photo/shallow-focus-photography-of-sliced-brownies-1277202/
