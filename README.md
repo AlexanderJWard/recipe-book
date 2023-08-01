@@ -2,9 +2,9 @@
 
 Recipe Book is a recipe-sharing site where foodies can share their favourite meals with other members of the community. With the ability to comment and like posts users are encouraged to engage with each other and share the love of food.
 
-Deployed HEROKU frontend project: [https://ajw-recipe-book.herokuapp.com/](https://ajw-recipe-book.herokuapp.com/)
-Deployed HEROKU backend API: [https://ajw-recipe-book-api.herokuapp.com/](https://ajw-recipe-book-api.herokuapp.com/)
-GitHub repository backend API: [https://github.com/AlexanderJWard/recipe-book-api](https://github.com/AlexanderJWard/recipe-book-api)
+- Deployed HEROKU frontend project: [https://ajw-recipe-book.herokuapp.com/](https://ajw-recipe-book.herokuapp.com/)
+- Deployed HEROKU backend API: [https://ajw-recipe-book-api.herokuapp.com/](https://ajw-recipe-book-api.herokuapp.com/)
+- GitHub repository backend API: [https://github.com/AlexanderJWard/recipe-book-api](https://github.com/AlexanderJWard/recipe-book-api)
 
 ![image](https://github.com/AlexanderJWard/recipe-book/assets/102811792/90560ca7-a6e0-4190-ae98-3b9ad261f0fa)
 
