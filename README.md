@@ -48,7 +48,7 @@
 
 
 ## User Stories
-Here are the links to my [kanban board](https://github.com/users/AlexanderJWard/projects/3)
+Here are the links to my [kanban board](https://github.com/users/AlexanderJWard/projects/4) and the user stories hosted in [Github issues](https://github.com/AlexanderJWard/recipe-book/issues)
 
 ## Design
 
